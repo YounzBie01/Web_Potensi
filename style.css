@@ -1,0 +1,68 @@
+.landingpage {
+  background-image: url("logo/telaga\ tanado.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contlandingpage {
+  margin-top: 30vh;
+  width: 800px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+}
+
+#col-taruna {
+  text-decoration: none;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.336);
+  margin-left: 100px;
+  padding: 20px;
+  width: 250px;
+  height: 220px;
+  border-radius: 30px;
+}
+#col-taruna:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #0294b557;
+  margin-left: 100px;
+  padding: 20px;
+  width: 250px;
+  height: 220px;
+  border-radius: 30px;
+}
+.taruna {
+  width: 150px;
+  height: 150px;
+}
+#col-bumdes {
+  text-decoration: none;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.336);
+  margin-left: 100px;
+  padding: 20px;
+  width: fit-content;
+  border-radius: 30px;
+}
+#col-bumdes:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #e1e4265d;
+  margin-left: 100px;
+  padding: 20px;
+  width: fit-content;
+  border-radius: 30px;
+}
+.bumdes {
+  width: 300px;
+  height: 150px;
+}
+.nvtaruna {
+  width: 70px;
+  height: 70px;
+}
+#navtaruna {
+  background-color: #0295b5;
+}
