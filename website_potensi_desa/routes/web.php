@@ -14,13 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('landingpage');
+    return view('landingpage',[
+        "web_name" => "bumdes"
+    ]);
 });
 
-Route::get('/hometaruna/', function(){
-    return view('hometaruna');
+Route::get('/taruna', function(){
+    return view('taruna_home',[
+        "web_name" => "taruna"
+    ]);
 });
 
-Route::get('/homebumdes/', function(){
-    return view('homebumdes');
+Route::get('/taruna/ketua', function(){
+    return view('taruna_ketua',[
+        "web_name" => "taruna"
+    ]);
+});
+
+Route::get('/bumdes', function(){
+    return view('bumdes_home', [
+        "web_name" => "bumdes"
+    ]);
 });
