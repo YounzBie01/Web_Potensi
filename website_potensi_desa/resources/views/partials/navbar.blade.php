@@ -18,9 +18,9 @@
         <ul class="navbar-nav m-auto mb-2 mb-md-0">
             <li class="nav-item">
                 @if ($web_name == "bumdes")
-                    <a class="nav-link" aria-current="page" href="/">Beranda</a>                
+                    <a class="nav-link" aria-current="page" href="/bumdes">Beranda</a>                
                 @else
-                    <a class="nav-link" aria-current="page" href="/">Beranda</a>
+                    <a class="nav-link" aria-current="page" href="/taruna">Beranda</a>
                 @endif
             </li>
 
@@ -50,7 +50,7 @@
             </li>
 
             <li class="nav-item">
-               <a class="nav-link" href="#">Kontak</a>
+               <a class="nav-link" href="#kontak">Kontak</a>
             </li>
 
             @if ($web_name == "bumdes")
