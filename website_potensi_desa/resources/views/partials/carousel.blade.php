@@ -7,26 +7,29 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active" id="item1">
+          <img src="{{ $path_norm }}{{ $carousel_img[0]->image_path ?? 'logo\telaga_tanado.jpeg' }}" class="carousel-item-img-top" alt="...">
             <div class="container" id="carousel">
               <div class="carousel-caption text-start">
                 <h1>Example headline.</h1>
-                <p>Some representative placeholder content for the first slide of the carousel.</p>
+                <p>{{ $carousel_img[0]->description ?? 'test'}}</p>
               </div>
             </div>
         </div>
         <div class="carousel-item" id="item2">
+          <img src="{{ $path_norm }}{{ $carousel_img[0]->image_path ?? 'logo\telaga_tanado.jpeg' }}" class="carousel-item-img-top" alt="...">
             <div class="container" id="carousel">
               <div class="carousel-caption text-start">
                 <h1>Example headline.</h1>
-                <p>Some representative placeholder content for the first slide of the carousel.</p>
+                <p>{{ $carousel_img[1]->description ?? 'test'}}</p>
               </div>
             </div>
         </div>
         <div class="carousel-item" id="item3">
+          <img src="{{ $path_norm }}{{ $carousel_img[0]->image_path ?? 'logo\telaga_tanado.jpeg' }}" class="carousel-item-img-top" alt="...">
             <div class="container" id="carousel">
               <div class="carousel-caption text-start">
                 <h1>Example headline.</h1>
-                <p>Some representative placeholder content for the first slide of the carousel.</p>
+                <p>{{ $carousel_img[2]->description ?? 'test'}}</p>
               </div>
             </div>
         </div>

@@ -5,7 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class taruna_quotes extends Model
+class BumdesQuotes extends Model
 {
     use HasFactory;
+
+    protected $guarded = [
+        'id'
+    ];
+
 }

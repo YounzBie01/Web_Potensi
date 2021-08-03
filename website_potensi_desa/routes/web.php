@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Covid_controller;
+use App\Http\Controllers\Home_controller;
+use App\Http\Controllers\SOTK_controller;
+use App\Http\Controllers\Taruna_home;
 use App\Http\Controllers\TarunaQuotesController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,7 +24,10 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/taruna', [TarunaQuotesController::class, 'index']);
+Route::get('/taruna', [Home_controller::class, 'show_taruna']);
+Route::get('/taruna/sotk', [SOTK_controller::class, 'show_taruna']);
+Route::get('/taruna/covid', [Covid_controller::class, 'show_taruna']);
+
 
 Route::get('/taruna/ketua', function(){
     return view('taruna_ketua',[
@@ -28,17 +35,8 @@ Route::get('/taruna/ketua', function(){
     ]);
 });
 
-Route::get('/taruna/covid', function(){
-    return view('covid',[
-        "web_name" => "taruna"
-    ]);
-});
 
-Route::get('/taruna/sotk', function(){
-    return view('taruna_sotk',[
-        "web_name" => "taruna"
-    ]);
-});
+
 
 Route::get('/taruna/kegiatan', function(){
     return view('taruna_list_kegiatan',[
@@ -60,23 +58,18 @@ Route::get('/bumdes', function(){
     ]);
 });
 
+
+Route::get('/bumdes', [Home_controller::class, 'show_bumdes']);
+Route::get('/bumdes/sotk', [SOTK_controller::class, 'show_bumdes']);
+Route::get('/bumdes/covid', [Covid_controller::class, 'show_bumdes']);
+
+
 Route::get('/bumdes/ketua', function(){
     return view('bumdes_ketua', [
         "web_name" => "bumdes"
     ]);
 });
 
-Route::get('/bumdes/covid', function(){
-    return view('covid', [
-        "web_name" => "bumdes"
-    ]);
-});
-
-Route::get('/bumdes/sotk', function(){
-    return view('bumdes_sotk', [
-        "web_name" => "bumdes"
-    ]);
-});
 
 Route::get('/bumdes/kegiatan', function(){
     return view('bumdes_list_kegiatan', [

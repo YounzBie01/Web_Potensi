@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\taruna_quotes;
+use App\Models\LowerCovid;
 use Illuminate\Http\Request;
 
-class TarunaQuotesController extends Controller
+class LowerCovidController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +15,6 @@ class TarunaQuotesController extends Controller
     public function index()
     {
         //
-        return view('taruna_home', [
-            "quote" => taruna_quotes::all()->random(),
-            "web_name" => "taruna"
-        ]);
     }
 
     /**
@@ -45,10 +41,10 @@ class TarunaQuotesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\taruna_quotes  $taruna_quotes
+     * @param  \App\Models\LowerCovid  $lowerCovid
      * @return \Illuminate\Http\Response
      */
-    public function show(taruna_quotes $taruna_quotes)
+    public function show(LowerCovid $lowerCovid)
     {
         //
     }
@@ -56,10 +52,10 @@ class TarunaQuotesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\taruna_quotes  $taruna_quotes
+     * @param  \App\Models\LowerCovid  $lowerCovid
      * @return \Illuminate\Http\Response
      */
-    public function edit(taruna_quotes $taruna_quotes)
+    public function edit(LowerCovid $lowerCovid)
     {
         //
     }
@@ -68,10 +64,10 @@ class TarunaQuotesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\taruna_quotes  $taruna_quotes
+     * @param  \App\Models\LowerCovid  $lowerCovid
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, taruna_quotes $taruna_quotes)
+    public function update(Request $request, LowerCovid $lowerCovid)
     {
         //
     }
@@ -79,10 +75,10 @@ class TarunaQuotesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\taruna_quotes  $taruna_quotes
+     * @param  \App\Models\LowerCovid  $lowerCovid
      * @return \Illuminate\Http\Response
      */
-    public function destroy(taruna_quotes $taruna_quotes)
+    public function destroy(LowerCovid $lowerCovid)
     {
         //
     }

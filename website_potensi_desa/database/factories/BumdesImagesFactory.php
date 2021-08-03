@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\TarunaQuotes;
+use App\Models\BumdesImages;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class TarunaQuotesFactory extends Factory
+class BumdesImagesFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = TarunaQuotes::class;
+    protected $model = BumdesImages::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,8 @@ class TarunaQuotesFactory extends Factory
     public function definition()
     {
         return [
-            'taruna_quote' => $this->faker->sentence(8),
+            'image_path' => 'logo/telaga_tanado.jpeg',
+            'description' => $this->faker->paragraph(5)
         ];
     }
 }

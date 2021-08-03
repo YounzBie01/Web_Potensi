@@ -52,19 +52,19 @@
   padding-bottom: 50px;
 }
 #item1 {
-  background-image: url("logo/telaga\ tanado.jpeg");
+  /* background-image: url("/logo/telaga_tanado.jpeg"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 #item2 {
-  background-image: url("logo/telaga\ tanado.jpeg");
+  /* background-image: url("/logo/telaga_tanado.jpeg"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 #item3 {
-  background-image: url("logo/telaga\ tanado.jpeg");
+  /* background-image: url("/logo/telaga_tanado.jpeg"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

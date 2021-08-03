@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\TarunaQuotes;
+use App\Models\BumdesQuotes;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class TarunaQuotesFactory extends Factory
+class BumdesQuotesFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = TarunaQuotes::class;
+    protected $model = BumdesQuotes::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,7 @@ class TarunaQuotesFactory extends Factory
     public function definition()
     {
         return [
-            'taruna_quote' => $this->faker->sentence(8),
+            'bumdes_quote' => $this->faker->sentence(),
         ];
     }
 }

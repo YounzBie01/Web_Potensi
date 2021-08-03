@@ -7,7 +7,7 @@
 <!-- START THE FEATURETTES -->
 <div class="row featurette mt-3" id="ketua">
   <div class="col-md-6 order-md-2">
-    <h2 class="featurette-heading">{{ $quote->taruna_quote }} <span class="text-muted"><br><br><br>-Ragil Putra Siswanto</span></h2>
+    <h2 class="featurette-heading">{{ $quote_ketua->taruna_quote }} <span class="text-muted"><br><br><br>{{ $profil_ketua[1]->nama }}</span></h2>
     <p class="lead">Ketua Karang Taruna Dusun Pakuran 2021</p>
   </div>
   <div class="col-md-6 order-md-1">
@@ -32,30 +32,30 @@
     <!-- Three columns of text below the carousel -->
     <div class="row">
       <div class="col-lg-3">
-        <img src="logo/karang_taruna.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-        <h4>Nama</h4>
-        <h5>Jabatan</h5>
+        <img src="{{ $profil_pelindung[0]->foto_path }}" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <h4>{{ $profil_pelindung[0]->nama }}</h4>
+        <h5>{{ $profil_pelindung[0]->jabatan }}</h5>
       </div><!-- /.col-lg-3 -->
       <div class="col-lg-3">
-        <img src="logo/karang_taruna.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-        <h4>Nama</h4>
-        <h5>Jabatan</h5>
+        <img src="{{ $profil_ketua[1]->foto_path }}" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <h4>{{ $profil_ketua[1]->nama }}</h4>
+        <h5>{{ $profil_ketua[1]->jabatan }}</h5>
       </div><!-- /.col-lg-3 -->
       <div class="col-lg-3">
-        <img src="logo/karang_taruna.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-        <h4>Nama</h4>
-        <h5>Jabatan</h5>
+        <img src={{ $profil_sekretaris[2]->foto_path }} alt="" class="bd-placeholder-img rounded-circle" width="140" height="140" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <h4>{{ $profil_sekretaris[2]->nama }}</h4>
+        <h5>{{ $profil_sekretaris[2]->jabatan }}</h5>
       </div><!-- /.col-lg-3 -->
       <div class="col-lg-3">
-        <img src="logo/karang_taruna.png" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-        <h4>Nama</h4>
-        <h5>Jabatan</h5>
+        <img src={{ $profil_bendahara[3]->foto_path }} alt="" class="bd-placeholder-img rounded-circle" width="140" height="140" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <h4>{{ $profil_bendahara[3]->nama }}</h4>
+        <h5>{{ $profil_bendahara[3]->jabatan }}</h5>
       </div><!-- /.col-lg-3 -->
     </div><!-- /.row -->
 </div>
 
 <div class="container" id="selengkapnya">
-<a href="sotktaruna.html" class="btn" id="moreact2">Selengkapnya</a>
+<a href="/taruna/sotk" class="btn" id="moreact2">Selengkapnya</a>
 </div>
 
 <div class="container-fluid covid mt-5">
@@ -68,38 +68,17 @@
     </div>
   </div>
   <div class="row act">
+    @for ($i = 1; $i < 5; $i++)
     <div class="card" style="width: 18rem;">
-      <img src="logo/telaga tanado.jpeg" class="card-img-top" alt="...">
+      <img src={{ $posts_highlight->take(-$i)->first()->highlight_photo_path ?? 'logo\telaga_tanado.jpeg' }} class="card-img-top" alt="...">
+      {{-- <img src="logo/telaga_tanado.jpeg" class="card-img-top" alt="..."> --}}
       <div class="card-body text-center">
-        <h5 class="card-title ">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="detailactkarang.html" class="btn" id="moreact">Selengkapnya</a>
+        <h5 class="card-title ">{{ $posts_highlight->take(-$i)->first()->title ?? "yyy" }}</h5>
+        <p class="card-text">{{ $posts_highlight->take(-$i)->first()->excerpt ?? "yyy" }}</p>
+        <a href="{{ $posts_highlight->take(-$i)->first()->slug ?? "yyy" }}" class="btn" id="moreact">Selengkapnya</a>
       </div>
     </div>
-    <div class="card" style="width: 18rem;">
-      <img src="logo/telaga tanado.jpeg" class="card-img-top" alt="...">
-      <div class="card-body text-center">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="detailactkarang.html" class="btn" id="moreact">Selengkapnya</a>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img src="logo/telaga tanado.jpeg" class="card-img-top" alt="...">
-      <div class="card-body text-center">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="detailactkarang.html" class="btn" id="moreact">Selengkapnya</a>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img src="logo/telaga tanado.jpeg" class="card-img-top" alt="...">
-      <div class="card-body text-center">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="detailactkarang.html" class="btn" id="moreact">Selengkapnya</a>
-      </div>
-    </div>
+    @endfor
   </div>
   <div class="container" id="selengkapnya">
     <a href="#" class="btn" id="moreact2">Kegiatan lainnya</a>
