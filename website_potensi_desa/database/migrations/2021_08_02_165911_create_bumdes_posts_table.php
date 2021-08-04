@@ -18,7 +18,7 @@ class CreateBumdesPostsTable extends Migration
             $table->text('title');
             $table->text('author');
             $table->text('category');
-            $table->text('slug');
+            $table->text('slug')->unique();
             $table->text('excerpt');
             $table->text('body');
             $table->text('highlight_photo_path');

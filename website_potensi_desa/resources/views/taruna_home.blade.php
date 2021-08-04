@@ -68,20 +68,20 @@
     </div>
   </div>
   <div class="row act">
-    @for ($i = 1; $i < 5; $i++)
+    @for ($i = 1; $i <= $highlight_count; $i++)
     <div class="card" style="width: 18rem;">
       <img src={{ $posts_highlight->take(-$i)->first()->highlight_photo_path ?? 'logo\telaga_tanado.jpeg' }} class="card-img-top" alt="...">
       {{-- <img src="logo/telaga_tanado.jpeg" class="card-img-top" alt="..."> --}}
       <div class="card-body text-center">
         <h5 class="card-title ">{{ $posts_highlight->take(-$i)->first()->title ?? "yyy" }}</h5>
         <p class="card-text">{{ $posts_highlight->take(-$i)->first()->excerpt ?? "yyy" }}</p>
-        <a href="{{ $posts_highlight->take(-$i)->first()->slug ?? "yyy" }}" class="btn" id="moreact">Selengkapnya</a>
+        <a href="/taruna/kegiatan/{{ $posts_highlight->take(-$i)->first()->slug ?? "yyy" }}" class="btn" id="moreact">Selengkapnya</a>
       </div>
     </div>
     @endfor
   </div>
   <div class="container" id="selengkapnya">
-    <a href="#" class="btn" id="moreact2">Kegiatan lainnya</a>
+    <a href="/taruna/kegiatan" class="btn" id="moreact2">Kegiatan lainnya</a>
   </div>
 </div>
 @endsection

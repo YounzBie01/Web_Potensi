@@ -67,20 +67,20 @@
     </div>
   </div>
   <div class="row act">
-    @for ($i = 1; $i < 5; $i++)
+    @for ($i = 1; $i <= $berita_highlight_count; $i++)
     <div class="card" style="width: 18rem;">
       <img src={{ $berita_posts_highlight->take(-$i)->first()->highlight_photo_path ?? 'logo\telaga_tanado.jpeg' }} class="card-img-top" alt="...">
       {{-- <img src="logo/telaga_tanado.jpeg" class="card-img-top" alt="..."> --}}
       <div class="card-body text-center">
         <h5 class="card-title ">{{ $berita_posts_highlight->take(-$i)->first()->title ?? "yyy" }}</h5>
         <p class="card-text">{{ $berita_posts_highlight->take(-$i)->first()->excerpt ?? "yyy" }}</p>
-        <a href="{{ $berita_posts_highlight->take(-$i)->first()->slug ?? "yyy" }}" class="btn" id="moreact">Selengkapnya</a>
+        <a href="/bumdes/berita/{{ $berita_posts_highlight->take(-$i)->first()->slug ?? "yyy" }}" class="btn" id="moreact">Selengkapnya</a>
       </div>
     </div>
     @endfor
   </div>
   <div class="container" id="selengkapnya">
-    <a href="actbumdes.html" class="btn" id="moreact2">Berita lainnya</a>
+    <a href="/bumdes/berita" class="btn" id="moreact2">Berita lainnya</a>
   </div>
 </div>
 
@@ -91,20 +91,20 @@
     </div>
   </div>
   <div class="row act">
-    @for ($i = 1; $i < 5; $i++)
+    @for ($i = 1; $i <= $potensi_highlight_count; $i++)
     <div class="card" style="width: 18rem;">
       <img src={{ $potensi_posts_highlight->take(-$i)->first()->highlight_photo_path ?? 'logo\telaga_tanado.jpeg' }} class="card-img-top" alt="...">
       {{-- <img src="logo/telaga_tanado.jpeg" class="card-img-top" alt="..."> --}}
       <div class="card-body text-center">
         <h5 class="card-title ">{{ $potensi_posts_highlight->take(-$i)->first()->title ?? "yyy" }}</h5>
         <p class="card-text">{{ $potensi_posts_highlight->take(-$i)->first()->excerpt ?? "yyy" }}</p>
-        <a href="{{ $potensi_posts_highlight->take(-$i)->first()->slug ?? "yyy" }}" class="btn" id="moreact">Selengkapnya</a>
+        <a href="/bumdes/potensi/{{ $potensi_posts_highlight->take(-$i)->first()->slug ?? "yyy" }}" class="btn" id="moreact">Selengkapnya</a>
       </div>
     </div>
     @endfor
   </div>
   <div class="container" id="selengkapnya">
-    <a href="potensi.html" class="btn" id="moreact2">Potensi lainnya</a>
+    <a href="/bumdes/potensi" class="btn" id="moreact2">Potensi lainnya</a>
   </div>
 </div>
 
@@ -115,20 +115,20 @@
     </div>
   </div>
   <div class="row act">
-    @for ($i = 1; $i < 5; $i++)
+    @for ($i = 1; $i <= $umkm_highlight_count; $i++)
     <div class="card" style="width: 18rem;">
       <img src={{ $umkm_posts_highlight->take(-$i)->first()->highlight_photo_path ?? 'logo\telaga_tanado.jpeg' }} class="card-img-top" alt="...">
       {{-- <img src="logo/telaga_tanado.jpeg" class="card-img-top" alt="..."> --}}
       <div class="card-body text-center">
         <h5 class="card-title ">{{ $umkm_posts_highlight->take(-$i)->first()->title ?? "yyy" }}</h5>
         <p class="card-text">{{ $umkm_posts_highlight->take(-$i)->first()->excerpt ?? "yyy" }}</p>
-        <a href="{{ $umkm_posts_highlight->take(-$i)->first()->slug ?? "yyy" }}" class="btn" id="moreact">Selengkapnya</a>
+        <a href="/bumdes/umkm/{{ $umkm_posts_highlight->take(-$i)->first()->slug ?? "yyy" }}" class="btn" id="moreact">Selengkapnya</a>
       </div>
     </div>
     @endfor
   </div>
   <div class="container" id="selengkapnya">
-    <a href="umkm.html" class="btn" id="moreact2">UMKM lainnya</a>
+    <a href="/bumdes/umkm" class="btn" id="moreact2">UMKM lainnya</a>
   </div>
 </div>
 
